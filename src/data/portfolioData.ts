@@ -16,6 +16,7 @@ export const PORTFOLIO_DATA = {
   profile: {
     name: 'Sathwik',
     handle: 'sathwik',
+    avatar: '/assets/aistudio/IMG_20261025_145024_a0e4a20f.jpg',
     role: 'Developer & Aspiring Entrepreneur',
     headline: "Hi, I'm Sathwik.",
     subheadline: "Building with AI, exploring systems, and turning ambitious ideas into software that solves real problems.",
@@ -48,8 +49,8 @@ export const PORTFOLIO_DATA = {
 
   contact: {
     email: 'sathwik1817@gmail.com',
-    twitter: 'https://x.com/sathwik',
-    twitterHandle: '@sathwik',
+    twitter: 'https://x.com/sath_vk18',
+    twitterHandle: '@sath_vk18',
     instagram: 'https://instagram.com/sath_vk18',
     instagramHandle: '@sath_vk18',
     availableFor: 'Open to discussions about AI, web development, hackathons, and innovative startup ideas.',
