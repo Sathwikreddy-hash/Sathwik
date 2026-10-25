@@ -19,7 +19,6 @@ export const PORTFOLIO_DATA = {
     role: 'Developer & Aspiring Entrepreneur',
     headline: "Hi, I'm Sathwik.",
     subheadline: "Building with AI, exploring systems, and turning ambitious ideas into software that solves real problems.",
-    statusText: "Available for projects & collaborations",
   },
 
   about: {
@@ -34,7 +33,7 @@ export const PORTFOLIO_DATA = {
       tags: ['React', 'Tailwind CSS', 'TypeScript', 'Lovable'],
       demoUrl: 'https://voltbay.lovable.app',
       status: 'Live MVP',
-      year: '2025',
+      year: '2026',
     },
     {
       id: 'ai-flashcard-generator',
@@ -43,21 +42,12 @@ export const PORTFOLIO_DATA = {
       tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Google Gemini API'],
       demoUrl: 'https://ai-flashcards-vert.vercel.app/',
       status: 'Developing',
-      year: '2025',
-    },
-    {
-      id: 'rcb-analytics',
-      title: 'RCB Fan Hub & Stat Visualizer',
-      description: 'An interactive analytics web dashboard showcasing match momentum, Kohli batting streaks, and team telemetry.',
-      tags: ['React', 'Tailwind CSS', 'Chart.js', 'REST APIs'],
-      demoUrl: 'https://rcb-hub.demo.dev',
-      status: 'Completed',
-      year: '2025',
+      year: '2026',
     },
   ] as Project[],
 
   contact: {
-    email: 'sathwik@example.com',
+    email: 'sathwik1817@gmail.com',
     twitter: 'https://x.com/sathwik',
     twitterHandle: '@sathwik',
     instagram: 'https://instagram.com/sath_vk18',

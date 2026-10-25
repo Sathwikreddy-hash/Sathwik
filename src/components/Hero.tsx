@@ -11,12 +11,10 @@ export const Hero: React.FC = () => {
   return (
     <section className="pt-16 pb-14 sm:pt-22 sm:pb-18 border-b border-zinc-200 dark:border-zinc-800/80">
       <FadeInUp className="max-w-2xl">
-        {/* Understated status lead - strictly no age here, only in About */}
+        {/* Role Lead Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-6 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400">
-          <span className={`w-2 h-2 rounded-full ${accentConfig.dotColor} animate-pulse`} />
+          <span className={`w-1.5 h-1.5 rounded-full ${accentConfig.dotColor}`} />
           <span>{profile.role}</span>
-          <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-700">·</span>
-          <span>{profile.statusText}</span>
         </div>
 
         {/* Main Headline */}
