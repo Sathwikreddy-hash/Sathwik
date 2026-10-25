@@ -7,9 +7,8 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  githubUrl?: string;
   demoUrl?: string;
-  status: string;
+  status: 'Live MVP' | 'Developing' | 'Completed';
   year: string;
 }
 
@@ -17,11 +16,10 @@ export const PORTFOLIO_DATA = {
   profile: {
     name: 'Sathwik',
     handle: 'sathwik',
-    age: 15,
     role: 'Developer & Aspiring Entrepreneur',
     headline: "Hi, I'm Sathwik.",
-    subheadline: "Building with AI, exploring systems, and turning ideas into software that solves real problems.",
-    statusText: "Exploring AI development & web engineering",
+    subheadline: "Building with AI, exploring systems, and turning ambitious ideas into software that solves real problems.",
+    statusText: "Available for projects & collaborations",
   },
 
   about: {
@@ -39,12 +37,12 @@ export const PORTFOLIO_DATA = {
       year: '2025',
     },
     {
-      id: 'quicktask-cli',
-      title: 'QuickTask Minimalist CLI',
-      description: 'A rapid, keystroke-driven terminal productivity tool for tracking milestones and daily engineering routines.',
-      tags: ['Node.js', 'TypeScript', 'CLI'],
-      githubUrl: 'https://github.com/sathwik/quicktask-cli',
-      status: 'Completed',
+      id: 'ai-flashcard-generator',
+      title: 'AI Flashcard Generator',
+      description: 'An AI-powered study assistant that generates interactive 3D flashcards from any YouTube video transcript or custom text prompt.',
+      tags: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Google Gemini API'],
+      demoUrl: 'https://ai-flashcards-vert.vercel.app/',
+      status: 'Developing',
       year: '2025',
     },
     {
@@ -52,7 +50,6 @@ export const PORTFOLIO_DATA = {
       title: 'RCB Fan Hub & Stat Visualizer',
       description: 'An interactive analytics web dashboard showcasing match momentum, Kohli batting streaks, and team telemetry.',
       tags: ['React', 'Tailwind CSS', 'Chart.js', 'REST APIs'],
-      githubUrl: 'https://github.com/sathwik/rcb-analytics',
       demoUrl: 'https://rcb-hub.demo.dev',
       status: 'Completed',
       year: '2025',
@@ -61,9 +58,10 @@ export const PORTFOLIO_DATA = {
 
   contact: {
     email: 'sathwik@example.com',
-    github: 'https://github.com/sathwik',
     twitter: 'https://x.com/sathwik',
-    discord: 'sathwik#0000',
+    twitterHandle: '@sathwik',
+    instagram: 'https://instagram.com/sath_vk18',
+    instagramHandle: '@sath_vk18',
     availableFor: 'Open to discussions about AI, web development, hackathons, and innovative startup ideas.',
   },
 };
