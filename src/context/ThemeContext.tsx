@@ -70,6 +70,7 @@ export const ACCENTS: Record<AccentColor, AccentConfig> = {
 interface ThemeContextType {
   theme: Theme;
   toggleTheme: () => void;
+  setTheme: (theme: Theme) => void;
   accent: AccentColor;
   setAccent: (accent: AccentColor) => void;
   accentConfig: AccentConfig;
@@ -78,13 +79,14 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType>({
   theme: 'dark',
   toggleTheme: () => {},
+  setTheme: () => {},
   accent: 'blue',
   setAccent: () => {},
   accentConfig: ACCENTS.blue,
 });
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
+  const [theme, setThemeState] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('portfolio-theme') as Theme | null;
       if (stored === 'light' || stored === 'dark') return stored;
@@ -105,14 +107,24 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     const root = document.documentElement;
     if (theme === 'dark') {
       root.classList.add('dark');
+      root.classList.remove('light');
+      document.body.classList.add('dark');
+      document.body.classList.remove('light');
     } else {
       root.classList.remove('dark');
+      root.classList.add('light');
+      document.body.classList.remove('dark');
+      document.body.classList.add('light');
     }
     localStorage.setItem('portfolio-theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+    setThemeState((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  const setTheme = (newTheme: Theme) => {
+    setThemeState(newTheme);
   };
 
   const setAccent = (newAccent: AccentColor) => {
@@ -125,6 +137,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       value={{
         theme,
         toggleTheme,
+        setTheme,
         accent,
         setAccent,
         accentConfig: ACCENTS[accent],

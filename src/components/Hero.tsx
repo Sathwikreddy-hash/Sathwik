@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowDown, Mail, Github, ArrowUpRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
 
 export const Hero: React.FC = () => {
-  const { profile, contact } = PORTFOLIO_DATA;
+  const { profile } = PORTFOLIO_DATA;
   const { accentConfig } = useTheme();
 
   return (
@@ -54,26 +54,6 @@ export const Hero: React.FC = () => {
           >
             <span>Get in touch</span>
             <ArrowUpRight className="w-3.5 h-3.5 stroke-[2]" />
-          </a>
-        </div>
-
-        {/* Quick Social Strip */}
-        <div className="mt-9 pt-6 border-t border-zinc-200/80 dark:border-zinc-800/80 flex flex-wrap items-center gap-4 text-xs text-zinc-500 dark:text-zinc-400">
-          <a
-            href={contact.github}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-100/80 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:text-zinc-950 dark:hover:text-zinc-100 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors"
-          >
-            <Github className="w-3.5 h-3.5" />
-            <span>GitHub</span>
-          </a>
-          <a
-            href={`mailto:${contact.email}`}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-100/80 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:text-zinc-950 dark:hover:text-zinc-100 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors"
-          >
-            <Mail className="w-3.5 h-3.5" />
-            <span>{contact.email}</span>
           </a>
         </div>
       </motion.div>

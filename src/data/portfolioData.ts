@@ -9,7 +9,7 @@ export interface Project {
   tags: string[];
   githubUrl?: string;
   demoUrl?: string;
-  status: 'In Progress' | 'Completed' | 'Concept';
+  status: string;
   year: string;
 }
 
@@ -30,17 +30,16 @@ export const PORTFOLIO_DATA = {
 
   projects: [
     {
-      id: 'proj-1',
-      title: 'AI Workflow Assistant',
-      description: 'An intelligent personal assistant interface designed to automate daily developer workflows and synthesize web data.',
-      tags: ['Next.js', 'TypeScript', 'Gemini API', 'Tailwind CSS'],
-      githubUrl: 'https://github.com/sathwik/ai-workflow-assistant',
-      demoUrl: 'https://ai-assistant.demo.dev',
-      status: 'In Progress',
-      year: '2026',
+      id: 'voltbay',
+      title: 'VoltBay',
+      description: 'An EV charging platform MVP designed to help electric vehicle owners easily locate, access, and manage charging stations.',
+      tags: ['React', 'Tailwind CSS', 'TypeScript', 'Lovable'],
+      demoUrl: 'https://voltbay.lovable.app',
+      status: 'Live MVP',
+      year: '2025',
     },
     {
-      id: 'proj-2',
+      id: 'quicktask-cli',
       title: 'QuickTask Minimalist CLI',
       description: 'A rapid, keystroke-driven terminal productivity tool for tracking milestones and daily engineering routines.',
       tags: ['Node.js', 'TypeScript', 'CLI'],
@@ -49,7 +48,7 @@ export const PORTFOLIO_DATA = {
       year: '2025',
     },
     {
-      id: 'proj-3',
+      id: 'rcb-analytics',
       title: 'RCB Fan Hub & Stat Visualizer',
       description: 'An interactive analytics web dashboard showcasing match momentum, Kohli batting streaks, and team telemetry.',
       tags: ['React', 'Tailwind CSS', 'Chart.js', 'REST APIs'],
