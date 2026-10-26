@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useTheme, ACCENTS, AccentColor } from '../context/ThemeContext';
+import { PORTFOLIO_DATA } from '../data/portfolioData';
 import { ThemeToggle } from './ThemeToggle';
 
 interface HeaderProps {
@@ -43,11 +44,18 @@ export const Header: React.FC<HeaderProps> = ({ activeSection }) => {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-50/90 dark:bg-[#0c0e14]/90 backdrop-blur-md transition-colors duration-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 h-15 flex items-center justify-between gap-6">
-        {/* Zone 1: Wordmark */}
+        {/* Zone 1: Wordmark with mini avatar like X/LinkedIn */}
         <a
           href="#"
-          className="group flex items-center gap-2 text-base font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors whitespace-nowrap shrink-0"
+          className="group flex items-center gap-2.5 text-base font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors whitespace-nowrap shrink-0"
         >
+          <div className="w-7 h-7 rounded-full overflow-hidden border border-zinc-200 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 shadow-2xs shrink-0">
+            <img
+              src={PORTFOLIO_DATA.profile.avatar}
+              alt={PORTFOLIO_DATA.profile.name}
+              className="w-full h-full object-cover object-[center_18%]"
+            />
+          </div>
           <span>sathwik</span>
           <span
             className={`w-1.5 h-1.5 rounded-full ${accentConfig.dotColor} transition-colors duration-200 group-hover:scale-125`}
