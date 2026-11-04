@@ -17,7 +17,7 @@ export const PORTFOLIO_DATA = {
     name: 'Sathwik',
     handle: 'sathwik',
     avatar: '/assets/aistudio/IMG_20261025_145024_a0e4a20f.jpg',
-    banner: '/assets/aistudio/a3c7b81236aef7ced283f51362e30ee8_8f150181.jpg',
+    banner: '/assets/aistudio/d3936e4fbde0a7ac6821a91eaa002255__1__deed5026.jpg',
     role: 'Developer & Aspiring Entrepreneur',
     headline: "Hi, I'm Sathwik.",
     subheadline: "Building with AI, exploring systems, and turning ambitious ideas into software that solves real problems.",
