@@ -11,6 +11,32 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- High priority critical image preloads for instant header & profile display -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/aistudio/d3936e4fbde0a7ac6821a91eaa002255__1__deed5026.jpg"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/aistudio/IMG_20261025_145024_a0e4a20f.jpg"
+      fetchpriority="high"
+    />
+    <script>
+      // Immediately prime browser memory cache
+      (function() {
+        try {
+          const b = new Image();
+          b.fetchPriority = 'high';
+          b.src = '/assets/aistudio/d3936e4fbde0a7ac6821a91eaa002255__1__deed5026.jpg';
+          const a = new Image();
+          a.fetchPriority = 'high';
+          a.src = '/assets/aistudio/IMG_20261025_145024_a0e4a20f.jpg';
+        } catch (e) {}
+      })();
+    </script>
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"

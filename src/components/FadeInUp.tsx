@@ -4,13 +4,16 @@ interface FadeInUpProps {
   children: React.ReactNode;
   delay?: number;
   className?: string;
+  immediate?: boolean;
 }
 
-export const FadeInUp: React.FC<FadeInUpProps> = ({ children, delay = 0, className = '' }) => {
-  const [isVisible, setIsVisible] = useState(false);
+export const FadeInUp: React.FC<FadeInUpProps> = ({ children, delay = 0, className = '', immediate = false }) => {
+  const [isVisible, setIsVisible] = useState(immediate);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (immediate) return;
+
     const el = ref.current;
     if (!el) return;
 
@@ -26,15 +29,19 @@ export const FadeInUp: React.FC<FadeInUpProps> = ({ children, delay = 0, classNa
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [immediate]);
 
   return (
     <div
       ref={ref}
-      style={{ transitionDelay: `${delay}ms` }}
-      className={`transform transition-all duration-600 ease-out ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-      } ${className}`}
+      style={immediate ? undefined : { transitionDelay: `${delay}ms` }}
+      className={
+        immediate
+          ? className
+          : `transform transition-all duration-600 ease-out ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            } ${className}`
+      }
     >
       {children}
     </div>

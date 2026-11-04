@@ -10,17 +10,20 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="pt-4 sm:pt-6 pb-12 sm:pb-16 border-b border-zinc-200 dark:border-zinc-800/80">
-      <FadeInUp>
+      <FadeInUp immediate>
         {/* Profile Header Card */}
         <div className="relative rounded-2xl overflow-hidden border border-zinc-200/90 dark:border-zinc-800/90 bg-white dark:bg-[#12141c] shadow-2xs">
           {/* Panoramic Cover Banner (Virat Kohli "BELIEVE" Header) */}
-          <div className="relative h-44 sm:h-56 md:h-64 lg:h-72 w-full overflow-hidden bg-zinc-950">
+          <div className="relative h-44 sm:h-56 md:h-64 lg:h-72 w-full overflow-hidden bg-[#0c1728]">
             <img
               src={profile.banner}
               alt="Virat Kohli Believe Header Banner"
               className="w-full h-full object-cover object-[center_42%] transition-transform duration-700 ease-out hover:scale-[1.02]"
               loading="eager"
+              fetchPriority="high"
               decoding="async"
+              width={736}
+              height={414}
             />
             {/* Subtle bottom scrim to ensure clean avatar overlap without dimming the BELIEVE typography */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
@@ -38,12 +41,16 @@ export const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3.5 sm:gap-4 -mt-10 sm:-mt-14 md:-mt-16 mb-4">
               {/* Profile Avatar (Prominent & Face clearly visible) */}
               <div className="relative inline-block shrink-0">
-                <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-3 sm:border-4 border-white dark:border-[#12141c] shadow-md bg-zinc-100 dark:bg-zinc-800 ring-1 ring-black/5">
+                <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-3 sm:border-4 border-white dark:border-[#12141c] shadow-md bg-zinc-200 dark:bg-zinc-800 ring-1 ring-black/5">
                   <img
                     src={profile.avatar}
                     alt={profile.name}
                     className="w-full h-full object-cover object-[center_18%] transition-transform duration-500 ease-out hover:scale-105"
                     loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    width={128}
+                    height={128}
                   />
                 </div>
                 {/* Active indicator dot on avatar edge */}
