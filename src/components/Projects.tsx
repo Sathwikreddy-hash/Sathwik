@@ -227,6 +227,14 @@ export const Projects: React.FC = () => {
             })}
           </div>
         )}
+
+        {/* Subtle note under projects */}
+        <FadeInUp delay={200} className="mt-6 sm:mt-8 flex items-center justify-center text-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-zinc-200/90 dark:border-zinc-800/90 bg-zinc-100/70 dark:bg-[#12141c] text-xs text-zinc-600 dark:text-zinc-400 shadow-2xs">
+            <span className={`w-1.5 h-1.5 rounded-full ${accentConfig.dotColor} animate-pulse shrink-0`} />
+            <span className="font-medium">Not all my projects are featured here yet. More coming soon!</span>
+          </div>
+        </FadeInUp>
       </div>
     </section>
   );

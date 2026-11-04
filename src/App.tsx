@@ -11,6 +11,7 @@ import { About } from './components/About';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 function PortfolioApp() {
   const [activeSection, setActiveSection] = useState<string>('');
@@ -71,6 +72,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <PortfolioApp />
+      <Analytics />
     </ThemeProvider>
   );
 }
