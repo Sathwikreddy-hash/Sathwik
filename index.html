@@ -7,6 +7,12 @@
     <meta name="description" content="Minimalist, responsive personal portfolio website for 15-year-old developer Sathwik." />
     <link rel="canonical" href="https://sathwik-website.vercel.app/" />
 
+    <!-- Search Engine Optimization (SEO) & Indexing Directives -->
+    <meta name="keywords" content="Sathwik, Sathwik developer, sath_vk18, Sathwik portfolio, sathwik website, VoltBay, AI Flashcard Generator, teen developer, AI developer, React developer" />
+    <meta name="author" content="Sathwik (@sath_vk18)" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
     <!-- Google Search Console Verification Meta Tags -->
     <meta name="google-site-verification" content="t4xmj8C4cwKj_IisWMj-SLk_CCiJYEPkTViBwG2bK2g" />
     <meta name="google-site-verification" content="PGimKSnWCMT2UezglfkRRgJvwYBGcgKDIkoViXtdHOM" />
@@ -17,6 +23,7 @@
     <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://sathwik-website.vercel.app/" />
     <meta property="og:image" content="https://sathwik-website.vercel.app/assets/aistudio/d3936e4fbde0a7ac6821a91eaa002255__1__deed5026.jpg" />
+    <meta property="og:site_name" content="Sathwik Portfolio" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@sath_vk18" />
     <meta name="twitter:creator" content="@sath_vk18" />
@@ -24,21 +31,60 @@
     <meta name="twitter:description" content="Minimalist, responsive personal portfolio website for 15-year-old developer Sathwik." />
     <meta name="twitter:image" content="https://sathwik-website.vercel.app/assets/aistudio/d3936e4fbde0a7ac6821a91eaa002255__1__deed5026.jpg" />
 
-    <!-- Schema.org Structured Data for Google Search -->
+    <!-- Schema.org Rich Structured Data (JSON-LD) for Google Knowledge Graph -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfilePage",
-        "mainEntity": {
-          "@type": "Person",
-          "name": "Sathwik",
-          "url": "https://sathwik-website.vercel.app/",
-          "jobTitle": "Developer & Aspiring Entrepreneur",
-          "sameAs": [
-            "https://x.com/sath_vk18",
-            "https://instagram.com/sath_vk18"
-          ]
-        }
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://sathwik-website.vercel.app/#website",
+            "url": "https://sathwik-website.vercel.app/",
+            "name": "Sathwik Portfolio",
+            "description": "Minimalist, responsive personal portfolio website for 15-year-old developer Sathwik.",
+            "publisher": {
+              "@id": "https://sathwik-website.vercel.app/#person"
+            }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://sathwik-website.vercel.app/#profilepage",
+            "url": "https://sathwik-website.vercel.app/",
+            "name": "Sathwik — Developer Portfolio",
+            "isPartOf": {
+              "@id": "https://sathwik-website.vercel.app/#website"
+            },
+            "about": {
+              "@id": "https://sathwik-website.vercel.app/#person"
+            },
+            "mainEntity": {
+              "@id": "https://sathwik-website.vercel.app/#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://sathwik-website.vercel.app/#person",
+            "name": "Sathwik",
+            "alternateName": ["sath_vk18", "Sathwik Developer", "Sathwik Portfolio"],
+            "url": "https://sathwik-website.vercel.app/",
+            "image": "https://sathwik-website.vercel.app/assets/aistudio/IMG_20261025_145024_a0e4a20f.jpg",
+            "jobTitle": "Developer & Aspiring Entrepreneur",
+            "description": "15-year-old developer building AI-powered web applications and software that solves real problems.",
+            "sameAs": [
+              "https://x.com/sath_vk18",
+              "https://instagram.com/sath_vk18"
+            ],
+            "knowsAbout": [
+              "Artificial Intelligence",
+              "React",
+              "TypeScript",
+              "Next.js",
+              "Tailwind CSS",
+              "Web Development",
+              "Software Engineering"
+            ]
+          }
+        ]
       }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
